@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="八皇后问题.cpp" />
+    <ClCompile Include="哈夫曼树.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B4B4C82C-0FB6-41B6-A505-5999E6B1D038}</ProjectGuid>
