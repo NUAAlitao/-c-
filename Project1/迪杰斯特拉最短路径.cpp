@@ -4,6 +4,13 @@
 #include<set>
 using namespace std;
 
+/**
+ *查找当前节点所能到达的节点中距离最短的节点和距离值
+ *@param distanceTemp 当前节点所能到达的节点和距离
+ *@param discovered 已经计算的节点
+ *@param node 存放查找到的节点
+ *param distance 存放查找到的距离
+*/
 void findMinDistance(vector<int> &distanceTemp, set<int>& discovered, int &node, int &distance) {
 	distance = distanceTemp[0];
 	node = 0;
@@ -15,6 +22,15 @@ void findMinDistance(vector<int> &distanceTemp, set<int>& discovered, int &node,
 	}
 }
 
+/**
+ *根据查找到的最小距离节点更新所能到达的各点距离信息
+ *param graph 图的邻接矩阵
+ *param distanceTemp 当前节点所能到达的节点和距离
+ *param discovered 已经计算的节点
+ *param route 从开始节点到达各个节点的路径
+ *param node 查找到的当前距离最短的节点
+ *param distance 查找到的当前的最短距离
+*/
 void calculateNextDistance(vector<vector<int>>& graph, vector<int>& distanceTemp, set<int>& discovered, vector<queue<int>>& route,
 							int node, int distance) {
 	vector<int> nodeDistance(graph[node]);
@@ -25,7 +41,11 @@ void calculateNextDistance(vector<vector<int>>& graph, vector<int>& distanceTemp
 		}
 	}
 }
-
+/**
+ *求一节点到各个节点的最短路径
+ *@param graph 图的邻接矩阵
+ *@param start 开始节点
+*/
 void dijkstra(vector<vector<int>>& graph, int start) {
 	set<int> discovered;             //被发现并计算的节点
 	vector<queue<int>> route(graph.size(), queue<int>());			//从开始节点到各个节点的路径

@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="克鲁斯卡尔和普里姆求最小生成树.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="迪杰斯特拉最短路径.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
