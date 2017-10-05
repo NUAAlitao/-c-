@@ -1,16 +1,22 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include<iostream>
+#include<cstring>
+#include<vector>
+#include<list>
+#include<set>
+using namespace std;
+
+void fun(vector<int> vc1, list<int> &ls1) {
+	vc1.push_back(3);
+	ls1.push_back(4);
+}
+
 int main(){
-	int n;
-	scanf_s("%d", &n);
-	for (int i = 1; i <= n; i++){
-		for (int j = 1; j <= n - i; j++){
-			printf(" ");
-		}
-		for (int k = 1; k <= i; k++){
-			printf("*");
-		}
-		printf("\n");
-	}
+	vector<int> vc;
+	list<int> ls;
+	fun(vc, ls);
+
+	cout << vc.size() << endl << ls.size() << endl;
+	
+	
 	system("pause");
 }
